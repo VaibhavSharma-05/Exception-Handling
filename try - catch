@@ -1,0 +1,23 @@
+import java.io.FileInputStream;
+
+class Vaibhav{
+    public static void main(String args[]) {
+
+        try {
+            FileInputStream fis = new FileInputStream("d:/abc.txt");
+        } catch (Exception a) {
+            System.out.println(a);
+        }
+        System.out.println("Vaibhav");
+
+        try {
+            int a = 100, b = 0, c;
+            c = a / b;
+            System.out.println(c);
+        }
+        catch(ArithmeticException e){
+            System.out.println(e);
+        }
+        System.out.println("You cannot Divide 100 by 0");
+    }
+}
