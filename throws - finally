@@ -1,0 +1,36 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+class ReadAndWrite {
+
+    void readFile () throws FileNotFoundException {
+       FileInputStream fis = new FileInputStream("d:/abc.txt");
+        //statements
+    }
+    void saveFile() throws FileNotFoundException {
+
+        String text = " Java Class";
+        FileOutputStream fos = new FileOutputStream("d:/xyz.txt");
+        //statements
+    }
+}
+class test {
+
+    public static void main(String args[]){
+        ReadAndWrite rw = new ReadAndWrite();
+
+        try {
+            rw.readFile();
+            rw.saveFile();
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.println("File not found : "+ e.getMessage());
+        }
+        finally
+        {
+            System.out.println("Vaibhav is here");
+        }    
+    }
+}
